@@ -1,0 +1,5 @@
+@mixin iconmask($url) {
+  mask: url($url) center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}

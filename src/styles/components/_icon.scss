@@ -1,0 +1,25 @@
+$imagesTest: test "/assets/test.png", tameralapute "/assets/test.png";
+
+.icon {
+  top: 0px;
+  position: relative;
+
+  &.yolo {
+    background-image: url("/assets/test.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @debug $images;
+
+  @each $class, $url in $imagesTest {
+    &.#{$class} {
+      background-image: url($url);
+      background-size: contain;
+      background-repeat: no-repeat;
+      // mask: url($url) center;
+      // mask-size: contain;
+      // mask-repeat: no-repeat;
+    }
+  }
+}
